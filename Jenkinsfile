@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Move to the 'main' directory
-                sh 'cd main && ./hello1'
+                sh 'cd main && ./hello'
             }
         }
         stage('Deploy') {
