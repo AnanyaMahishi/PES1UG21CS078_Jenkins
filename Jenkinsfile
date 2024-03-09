@@ -5,17 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 // Move to the 'main' directory
-
-                    sh 'g++ ./main/hello.cpp -o hello'
-
+                sh 'cd main && g++ hello.cpp -o hello'
             }
         }
         stage('Test') {
             steps {
                 // Move to the 'main' directory
-  
-                    sh './main/hello' 
-                
+                sh 'cd main && ./hello'
             }
         }
         stage('Deploy') {
